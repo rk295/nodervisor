@@ -51,7 +51,7 @@ config.sessionSecret = process.env.SECRET || '1234567890ABCDEF';
 // Read and write settings
 config.readHosts = function(db, callback){
 	var query = db('hosts')
-		.join('groups', 'hosts.idGroup', '=', 'groups.idGroup', 'left')
+		.leftJoin('groups', 'hosts.idGroup', '=', 'groups.idGroup')
 		.select('hosts.idHost', 'hosts.Name', 'hosts.Url', 'groups.Name AS GroupName');
 
 	query.exec(function(err, data){

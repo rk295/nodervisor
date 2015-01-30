@@ -81,7 +81,7 @@ exports.hosts = function(params) {
 					});
 				}
 			} else {
-				qry.join('groups', 'hosts.idGroup', '=', 'groups.idGroup', 'left')
+				qry.leftJoin('groups', 'hosts.idGroup', '=', 'groups.idGroup')
 				.select('hosts.idHost', 'hosts.Name', 'hosts.Url', 'groups.Name AS GroupName')
 				.exec(function(err, hosts){
 					res.render('hosts', {
