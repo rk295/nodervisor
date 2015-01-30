@@ -1,6 +1,8 @@
 nodervisor
 ==========
 
+**Note** This is forked from the [original](https://github.com/TAKEALOT/nodervisor) repo with all Pull Requests (as of 30/01/2015) merged in by Robin Kearney.
+
 A Supervisord manager in node.js. Nodervisor provides a real-time web dashboard for processes running under [supervisord](http://supervisord.org/) across multiple hosts. You can stop and start individual processes, restart all the processes on a host, view logs for a process in real-time, and put a dashboard up for a quick overall summary of your services.
 
 ### Requirements
